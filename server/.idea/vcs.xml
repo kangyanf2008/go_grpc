@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/armon/go-metrics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/cheekybits/genny" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/coreos/etcd" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/fsnotify/fsnotify" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/go-log/log" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/golang/protobuf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/google/btree" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/google/uuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/consul" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/errwrap" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-cleanhttp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-immutable-radix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-msgpack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-multierror" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-rootcerts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/go-sockaddr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/golang-lru" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/hcl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/memberlist" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/serf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/json-iterator/go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/lucas-clemente/quic-go" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/magiconair/properties" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/marten-seemann/qtls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/micro/cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/micro/go-micro" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/micro/mdns" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/miekg/dns" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/mitchellh/hashstructure" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/mitchellh/mapstructure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/modern-go/concurrent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/modern-go/reflect2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/nats-io/jwt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/nats-io/nats.go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/nats-io/nkeys" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/nats-io/nuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/pelletier/go-toml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/pkg/errors" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/sean-/seed" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/spf13/afero" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/spf13/cast" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/spf13/jwalterweatherman" vcs="Git" />
