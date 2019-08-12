@@ -1,0 +1,9 @@
+.idea/
+vendor/
+*.pb.go
+gen-go/
+.vscode/
+build/
+*.out
+*.svg
+*.test

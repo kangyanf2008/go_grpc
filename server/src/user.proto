@@ -1,0 +1,17 @@
+syntax = "proto3";
+package user;
+message response_user {
+  string username = 1;
+  int32 age = 2;
+  repeated string telphones = 3;
+}
+
+message request_user {
+  string uid = 1;
+}
+
+service user_service {
+rpc query_user(request_user) returns(response_user){} ;
+rpc stream_user(stream request_user) returns(stream response_user){} ;
+
+}

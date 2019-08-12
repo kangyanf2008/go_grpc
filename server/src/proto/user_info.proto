@@ -1,0 +1,37 @@
+syntax = "proto3";
+import "login_status.proto";
+import "protocol_code.proto";
+package com.bc.user.protobuffer;
+
+message user_info {
+  enum    sex_type {
+    MAN                                       = 0;   //男
+    WOMAN                                     = 1;   //女
+    UNKNOWN                                   = 2;   //未知
+  }
+  message  region {
+      string   country                        = 1;   //国家
+      string   city                           = 2;   //城市
+  }
+  string                        phone_number  = 1;   //手机号
+  string                        id            = 2;   //（如微信号、QQ号）唯一ID
+  string                        nick_name     = 3;   //昵称
+  string                        remarks       = 4;   //备注
+  sex_type                      sex           = 5;   //性别
+  string                        avatar        = 6;   //头像
+  region                        adress        = 7;   //地址
+  string                        per_signature = 8;   //个性签名
+  string                        qr_code       = 9;   //二维码
+}
+
+//请求个人信息
+message request_user_info {
+  com.bc.login.protobuffer.user_token       token         = 1;   //登录用户token验证信息
+  string                                    user_id       = 2;   //被查询的用户ID
+}
+
+//响应个人信息
+message response_user_info {
+  com.bc.protocol.protobuffer.response_code  code         = 1;  //返回码
+  user_info                                  info        = 2;   //用户信息
+}

@@ -1,0 +1,41 @@
+syntax = "proto3";
+package com.bc.login.protobuffer;
+import "protocol_code.proto";
+
+//接口公共字段
+message user_token {
+   string                         login_id     = 1;  //登录帐号ID
+   string                         token        = 2;  //登录用户token，做安全验证
+}
+
+//获取验证码
+message request_verification_code {
+   string                         phone_number = 1;  //手机号
+}
+
+//获取验证码：服务器返回状态码
+message response_verification_code {
+   com.bc.protocol.protobuffer.response_code  code         = 1;  //返回服务器状态码
+}
+
+message request_user_login {
+  enum  login_way {
+    MESSAGE                                    = 0;   //短信
+    PASSWORD                                   = 1;   //密码
+  }
+  enum  accounts_type {
+      PHONE_NUMBER                             = 0;   //手机号
+      PERSONAL_ACCOUNT                         = 1;   //个性帐号
+  }
+   string                         accounts     = 1;  //帐号
+   accounts_type                  a_type       = 2;  //帐号类型
+   login_way                      l_type       = 3;  //登录方式
+   string                         code         = 4;  //验证码/密码（根据登录方式，传不同内容）
+   string                         device_info  = 5;  //设备信息
+}
+
+message response_user_login {
+   com.bc.protocol.protobuffer.response_code  code          = 1;  //返回码
+   string                                     id            = 2;  //（如微信号、QQ号）唯一ID
+   string                                     token         = 3;  //登录用户token，做安全验证
+}

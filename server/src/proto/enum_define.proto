@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.bc.enum.protobuffer;
+
+//帐号类型
+enum  accounts_type {
+    PHONE_NUMBER                                             = 0;   //手机号
+}
+
+//用户状态
+enum  user_status {
+    ONLINE                                                  = 0;   //离线
+    OFFLINE                                                 = 1;   //在线
+}
+
+//系统类型
+enum  os_type {
+    ANDROID                                                  = 0;   //离线
+    IOS                                                      = 1;   //在线
+}

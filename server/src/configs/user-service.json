@@ -1,0 +1,12 @@
+{
+  "register": {
+    "address": "172.21.48.3:8500",
+    "service": "user-service",
+    "tag": [
+      "test"
+    ],
+    "port": 8080,
+    "deregisterCriticalServiceAfter": "1m",
+    "interval": "10s"
+  }
+}

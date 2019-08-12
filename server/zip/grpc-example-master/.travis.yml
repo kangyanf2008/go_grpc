@@ -1,0 +1,22 @@
+language: go
+
+go:
+  - "1.11.x"
+  - "1.12.x"
+  - "tip"
+
+env:
+  - PROTOBUF_VERSION=3.7.1 GO111MODULE=on
+
+before_install:
+  - basename=protoc-${PROTOBUF_VERSION}-linux-x86_64
+  - wget https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/$basename.zip
+  - unzip -d /home/travis $basename.zip
+  - rm $basename.zip
+  - PATH=/home/travis/bin:$PATH protoc --version
+  - make install
+  - echo $TRAVIS_GO_VERSION
+
+script:
+  - go test -v ./...
+  - make generate

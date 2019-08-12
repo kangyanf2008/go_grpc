@@ -1,0 +1,98 @@
+syntax = "proto3";
+package com.bc.contacts.protobuffer;
+import "protocol_code.proto";
+import "login_status.proto";
+import "enum_define.proto";
+
+
+//群
+message group_info {
+   string                                     id            = 1;   //群ID
+   string                                     name          = 2;   //群名称
+   string                                     icon          = 3;   //群图片
+}
+//联系人
+message contacts{
+   string                                     nick_name     = 1;   //昵称
+   string                                     remarks       = 2;   //备注
+   string                                     avatar        = 3;   //头像
+   string                                     id            = 4;   //（如微信号、QQ号）唯一ID
+}
+//新朋友
+message new_friend {
+   string                                     nick_name     = 1;   //昵称
+   string                                     avatar        = 2;   //头像
+   string                                     id            = 3;   //（如微信号、QQ号）唯一ID
+}
+
+//关注人
+message focus_people {
+   string                                     nick_name     = 1;   //昵称
+   string                                     avatar        = 2;   //头像
+   string                                     id            = 3;   //（如微信号、QQ号）唯一ID
+}
+
+//群成员信息
+message group_member {
+   string                                     nick_name     = 1;   //昵称
+   string                                     avatar        = 2;   //头像
+   string                                     id            = 3;   //（如微信号、QQ号）唯一ID
+   com.bc.enum.protobuffer.user_status        status        = 4;   //状态（0离线，1在线）
+
+}
+
+//请求通讯录列表页
+message request_contacts {
+   com.bc.login.protobuffer.user_token        token         = 1;   //登录用户token验证信息
+}
+
+//通讯录列表页返回结果
+message response_contacts {
+    com.bc.protocol.protobuffer.response_code  code           = 1;  //返回码
+    repeated   new_friend                   new_friend_list   = 2;  //新朋友
+    repeated   group_info                   group_list        = 3;  //群列表
+    repeated   focus_people                 focus_people_list = 4;  //关注人
+    repeated   contacts                     contacts_list     = 5;  //联系人
+}
+
+//请求群成员列表
+message request_group_member {
+    com.bc.login.protobuffer.user_token        token         = 1;   //登录用户token验证信息
+    string                                     group_id      = 2;   //群ID
+}
+
+//返回群成员列表
+message response_group_member {
+    com.bc.protocol.protobuffer.response_code  code           = 1;  //返回码
+    repeated   group_member                    members        = 2;  //群成员列表
+}
+
+//请求添加好友
+message request_add_friend {
+    com.bc.login.protobuffer.user_token        token         = 1;   //登录用户token验证信息
+    com.bc.enum.protobuffer.accounts_type      type          = 2;   //添加好友方式 0手机号
+    string                                     accounts      = 3;   //帐号
+}
+
+//返回添加用户结果
+message response_add_friend {
+    com.bc.protocol.protobuffer.response_code  code          = 1;  //返回码
+}
+
+//请求创建群
+message request_create_group {
+    com.bc.login.protobuffer.user_token        token         = 1;   //登录用户token验证信息
+    repeated string                            accounts      = 2;   //邀请人ID
+}
+
+//请求添加群成员
+message request_add_group_member {
+    com.bc.login.protobuffer.user_token        token         = 1;   //登录用户token验证信息
+    string                                     group_id      = 2;   //群ID
+    repeated string                            accounts      = 3;   //邀请人ID
+}
+
+//返回创建群或添加群成员结果
+message response_add_group {
+    com.bc.protocol.protobuffer.response_code  code          = 1;  //返回码
+}

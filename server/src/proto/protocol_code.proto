@@ -1,0 +1,11 @@
+syntax = "proto3";
+package com.bc.protocol.protobuffer;
+
+message response_code {
+  enum  res_code {
+    SUCESS                                 = 0;   //成功
+    UNKNOWN                                = 1;   //未知请求协议
+    UNAUTHORIZED                           = 401; //鉴权失败
+  }
+  res_code                     code        = 1;   //响应
+}
